@@ -1,0 +1,35 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: m3connect-service
+spec:
+  selector:
+    app: m3connect
+  ports:
+  - protocol: "TCP"
+    name: registry
+    port: 8080
+    targetPort: 8080
+  type: LoadBalancer
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: m3connect
+spec:
+  selector:
+    matchLabels:
+      app: m3connect
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: m3connect
+    spec:
+      containers:
+      - name: m3connect
+        image: localhost:5000/m3connect:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 5000
