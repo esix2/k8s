@@ -4,5 +4,5 @@ WORKDIR /app
 ADD . /app/
 RUN pip install -r requirements.txt
 
-EXPOSE 3000
+EXPOSE 999
 CMD ["python", "/app/query_server.py"]
