@@ -43,7 +43,7 @@ def update_output(value):
     DBisDown=True
     while DBisDown:
       try:
-        t = requests.get(f"http://127.0.0.1:2000/{value}").text
+        t = requests.get(f"http://0.0.0.0:2000/{value}").text
         idx1 = t.find(':'); idx2 = t.find('"',idx1+1)+1; idx3 = t.find('"',idx2); idx4 = t.find(':',idx3); idx5 = t.find('"',idx4+1)+1; idx6 = t.find('"',idx5);
         #query = getRole(value)
         name = t[idx2:idx3]
@@ -61,4 +61,4 @@ def update_output(value):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, host="127.0.0.1", port=3000)
+    app.run_server(debug=True, host="0.0.0.0", port=1980)
