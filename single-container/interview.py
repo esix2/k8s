@@ -11,7 +11,7 @@ app.layout = html.Div([
     html.Table([
         html.Tr([html.Th('This is a simple demo for '),
                  html.Th(html.Img(style={"padding": 0, "width": "160px", "height": "90px"}, src=app.get_asset_url('logo-m3connect.png'))),
-                 html.Th('interview'),
+                 html.Th('staff query'),
                  ]),
     ])),
     #html.H1(['This is simple demo for ', html.Img(style={"padding": 0, "width": "160px", "height": "90px"}, src=app.get_asset_url('logo-m3connect.png')), ' interview']),
@@ -42,4 +42,4 @@ def update_output(value):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, host="0.0.0.0", port=2020)
+    app.run_server(debug=True, host="0.0.0.0", port=1980)

@@ -8,8 +8,8 @@ spec:
   ports:
   - protocol: "TCP"
     name: registry
-    port: 8081
-    targetPort: 2020
+    port: 8080
+    targetPort: 1980
   type: LoadBalancer
 
 ---
@@ -32,4 +32,4 @@ spec:
         image: localhost:5000/single:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 1000
+        - containerPort: 2020
