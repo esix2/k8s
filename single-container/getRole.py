@@ -1,6 +1,8 @@
 def getRole(person):
   if person=="ez":
     return {"name": "Ehsan Zandi", "role" : "5G R&D research specialist"}
+  elif person=="ah":
+    return {"name": "Azadeh Hashemi", "role" : "my love! Ghorbounesh beram"}
   elif person=="jj":
     return {"name": "Jeniffer Juchens", "role" : "head of Human Resources"}
   elif person=="je":

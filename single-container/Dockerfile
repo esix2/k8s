@@ -5,4 +5,4 @@ ADD . /app/
 RUN pip install -r requirements.txt
 
 EXPOSE 2020
-CMD ["python", "/app/interview.py"]
+CMD ["python", "/app/app.py"]
