@@ -75,4 +75,6 @@ def update_output(value):
 
 if __name__ == '__main__':
     print(s.gethostbyname(s.gethostname()))
-    app.run_server(debug=True, host="0.0.0.0", port=1980)
+    context = ('cert.pem','key.pem')
+    app.run_server(debug=True, host="0.0.0.0", port=1980, ssl_context=context)
+    #app.run_server(debug=True, host="0.0.0.0", port=1980)

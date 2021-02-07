@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
       - name: portal
-        image: localhost:5000/portal:v1
+        image: localhost:5000/portal:secure
         imagePullPolicy: Always
         ports:
         - containerPort: 2020
